@@ -456,7 +456,6 @@
                         <outlet property="EvoLbl" destination="WoW-xA-juh" id="lrF-ca-xRz"/>
                         <outlet property="attackLbl" destination="qWg-mT-Kko" id="MN3-jv-dqc"/>
                         <outlet property="currentEvoImg" destination="ksr-JT-j7e" id="5qh-jU-ceU"/>
-                        <outlet property="currentEvolutionLbl" destination="ksr-JT-j7e" id="hSN-ZH-dTg"/>
                         <outlet property="defenseLbl" destination="SP2-HI-6c0" id="GwM-Bg-6td"/>
                         <outlet property="descriptionLbl" destination="jn4-n3-Wq9" id="F4e-3e-gSe"/>
                         <outlet property="heightLbl" destination="gro-dh-iPp" id="J8E-Kh-umj"/>
