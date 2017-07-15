@@ -143,7 +143,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        if searchBar.text == nil || searchBar.text == " " {
+        if searchBar.text == nil || searchBar.text == "" {
             
             inSearchMode = false
             collection.reloadData()

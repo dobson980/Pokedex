@@ -30,12 +30,37 @@ class PokemonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLbl.text = pokemon.name
-        
+        pokemon.downloadPokemonDetails() {
+            
+            self.updateUI()
+            
+        }
+    }
+    
+    func updateUI() {
+        nameLbl.text = pokemon.name.capitalized
+        pokedexIdLbl.text = "\(pokemon.pokedexId)"
+        weightLbl.text = pokemon.weight
+        heightLbl.text = pokemon.height
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        nextEvo()
+        typeLbl.text = pokemon.type
+        descriptionLbl.text = pokemon.descriptions
+        mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
+        currentEvoImg.image = UIImage(named: "\(pokemon.pokedexId)")
+        nextEvoImg.image = UIImage(named: "\(pokemon.nextEvoID)")
     }
     
     @IBAction func backBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func nextEvo() {
+        switch pokemon.nextEvoLvl {
+        case "": EvoLbl.text = "No Further Evolutions"
+        default: EvoLbl.text = "Next Evolution: \(pokemon.nextEvoText.capitalized) LVL \(pokemon.nextEvoLvl)"
+        }
     }
     
 }
